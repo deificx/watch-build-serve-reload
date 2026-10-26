@@ -1,0 +1,43 @@
+{
+  "name": "watch-build-serve-reload",
+  "version": "1.0.0",
+  "description": "Watch a source directory, call a supplied function, serve another directory, and reload on changes",
+  "scripts": {
+    "build": "tsc",
+    "start": "node example/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "./dist/*"
+  ],
+  "keywords": [],
+  "author": "Even Galland Alander <even@alander.org>",
+  "license": "UNLICENSED",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.11.2",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.11.2",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.3.0",
+    "prettier": "^3.9.10",
+    "reload": "^3.4.3",
+    "typescript": "^7.0.2",
+    "watcher": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/reload": "^3.2.3"
+  }
+}
